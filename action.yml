@@ -26,6 +26,7 @@ runs:
           mv oras-install/oras /usr/local/bin/
           rm -rf oras_0.12.0_*.tar.gz oras-install/
           echo "Oras installed!"
+        shell: bash
           
       - name: Install Cosign
         uses: sigstore/cosign-installer@main
@@ -38,6 +39,7 @@ runs:
       - name: Echo 
         run: |
             echo "This is after the package action step"
+        shell: bash
       
       - name: Sign package
         uses: ruchika-jain/sign-package@1.0.1
